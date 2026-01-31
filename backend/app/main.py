@@ -19,7 +19,13 @@ app = FastAPI(title="PitchSheet Agent", version="1.0.0")
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:3000", "http://127.0.0.1:3000"],
+    allow_origins=[
+        "http://localhost:3000",
+        "http://127.0.0.1:3000",
+        "https://ticker-summarizer.vercel.app",
+        "https://ticker-summarizer-git-main-mustafa-s-projects-fe434d18.vercel.app",
+        "https://ticker-summarizer-hzuskswfk-mustafa-s-projects-fe434d18.vercel.app",
+    ],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
